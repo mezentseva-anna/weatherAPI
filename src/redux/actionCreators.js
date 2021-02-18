@@ -3,7 +3,8 @@ import {
   FETCH_WEATHER_DAY,
   FETCH_WEATHER_WEEK,
   ADD_WEATHER_WEEK,
-  ADD_DETAILED_WEEK_DAY
+  ADD_DETAILED_WEEK_DAY,
+  ADD_CITIES
 } from './actionTypes';
 
 export const addWeatherDayAC = (payload) => ({
@@ -28,6 +29,11 @@ export const fetchWeatherWeekAC = (payload) => ({
 
 export const addDetailedWeekDayAC = (payload) => ({
   type: ADD_DETAILED_WEEK_DAY,
+  payload
+})
+
+export const addCitiesAC = (payload) => ({
+  type: ADD_CITIES,
   payload
 })
 

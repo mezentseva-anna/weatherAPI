@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
-import {fetchWeatherDayAC, fetchWeatherWeekAC} from './redux/actionCreators';
+import {addCitiesAC, fetchWeatherDayAC, fetchWeatherWeekAC} from './redux/actionCreators';
 
 export function App() {
     const dispatch = useDispatch();
@@ -22,6 +22,7 @@ export function App() {
 
     const findCity = (e) => {
         e.preventDefault();
+        dispatch(addCitiesAC(city))
         dispatch(fetchWeatherDayAC(city))
         dispatch(fetchWeatherWeekAC(city))
         setCity('')
