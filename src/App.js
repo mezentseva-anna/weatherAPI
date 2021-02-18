@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
+import {fetchWeatherDayAC, fetchWeatherWeekAC} from './redux/actionCreators';
 
 export function App() {
     const dispatch = useDispatch();
+    const {err} = useSelector(store => store);
     const history = useHistory();
     const [city, setCity] = useState('');
 
@@ -26,8 +28,8 @@ export function App() {
     };
 
     return (
-        <div className={style.weatherContainer}>
-            <div className={style.navPannel}>
+        <div>
+            <div>
                 <form onSubmit={findCity}>
                     <input value={city} onChange={({target}) => setCity(target.value)} placeholder="Search city"/>
                     <button type="submit">Find</button>
