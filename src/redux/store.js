@@ -11,7 +11,6 @@ import detailedWeekDay from './reducers/detailedWeekDayReducer';
 const sagaMiddleware = createSagaMiddleware()
 
 const city = JSON.parse(window.localStorage.getItem('cities'));
-console.log(city);
 const preloadedState = {
     cities: city ? city : [],
 }
