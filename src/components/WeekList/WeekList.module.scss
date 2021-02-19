@@ -1,0 +1,11 @@
+@import "src/utils/variables";
+
+@media (max-width: 1800px) {
+  .weekContainer {
+   max-width: 60rem;
+  }
+}
+
+.weekContainer {
+  display: inline-block;
+}

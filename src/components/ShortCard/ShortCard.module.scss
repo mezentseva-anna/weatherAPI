@@ -1,0 +1,21 @@
+@import "src/utils/variables";
+
+.card {
+  font-family: $usual-text;
+  background-color: $pink;
+  border-radius: $border-radius;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.name {
+  font-family: $middle-head-text;
+}
+
+.cardDetails {
+  ul {
+    margin: 1px;
+    list-style-type: none;
+    padding: 0.5rem;
+  }
+}

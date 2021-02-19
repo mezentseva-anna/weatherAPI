@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {tempConventer, timeConventer, weatherImg} from '../../utils/locals';
 import {useSelector} from 'react-redux';
 import {DetailedWeekDay} from './detailedWeekDay';
+import style from './DayCard.module.scss'
 
 export const DayCard = () => {
     const {main, sys, name, weather, wind} = useSelector(store => store.day);
@@ -17,13 +18,13 @@ export const DayCard = () => {
 
 
     return (
-        <div>
-            <div>
+        <div className={style.card}>
+            <div className={style.name}>
                 Your region : <br/>
                 {name ? <strong>{name}</strong> : null}
             </div>
-            {main && briefInfo ? <div>
-                <div>
+            {main && briefInfo ? <div className={style.cardDetails}>
+                <div className={style.picContainer}>
                     <img src={weatherImg(briefInfo.main.toLocaleLowerCase())} alt="img"/>
                     <p>
                         Today it is {briefInfo.main}
@@ -31,7 +32,7 @@ export const DayCard = () => {
                         {briefInfo.description}
                     </p>
                 </div>
-                <ul>
+                <ul className={style.infoContainer}>
                     <li>Sunrise: {timeConventer(sys.sunrise).getHours()} : {timeConventer(sys.sunrise).getMinutes()}</li>
                     <li>Sunset: {timeConventer(sys.sunset).getHours()} : {timeConventer(sys.sunset).getMinutes()}</li>
                     <li>Current temp: {tempConventer(main.temp)} &#8451;</li>
@@ -41,7 +42,7 @@ export const DayCard = () => {
                     <li> Wind: {wind.speed} m/sec</li>
                 </ul>
             </div> : null}
-            <div>
+            <div className={style.weekDayContainer}>
                 {detailedWeekDay ? <DetailedWeekDay detailedWeekDay={detailedWeekDay}/>: 'You can see more info here, just click on any day'}
             </div>
 

@@ -2,12 +2,13 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 import {errDayAC} from '../../redux/actionCreators';
+import style from './ErrorHandler.module.scss'
 
 export const ErrorHandler = () => {
     const {err} = useSelector(store => store);
     const dispatch = useDispatch();
     const history = useHistory();
-
+    
     useEffect(() => {
         const backToMainPage = setTimeout(() => {
             dispatch(errDayAC({status: false}))
@@ -16,7 +17,7 @@ export const ErrorHandler = () => {
         return () => clearTimeout(backToMainPage)
     },[dispatch,history])
     return (
-        <div> 
+        <div className={style.errContainer}> 
             OPS something went wrong ...
             <h1>{err.message}</h1>
             In 5 sec you will be redirected back to main

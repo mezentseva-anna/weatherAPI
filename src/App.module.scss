@@ -1,0 +1,95 @@
+@import "src/utils/variables";
+
+@media (min-width: $breakpoint) {
+  .navPannel {
+    position: fixed;
+    right: 2rem;
+    top: 1rem;
+  }
+
+  form {
+
+    input {
+      font-size: 30px !important;
+      font-family: $head-text;
+    }
+
+    button {
+      font-size: 20px !important;
+    }
+
+    button:active,
+    button:focus {
+      outline: none;
+    }
+  }
+}
+
+.weatherContainer {
+  display: inline-flex;
+  flex-direction: row-reverse;
+}
+
+.citiesList{
+  background-color: $green;
+}
+
+.navPannel {
+  background-color: $green;
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: $border-radius;
+  height: fit-content;
+
+  form {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    input {
+      border-radius: $border-radius;
+      font-family: $head-text;
+      padding: 5px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    button {
+      background-color: $brown;
+      font-size: 10px;
+      border-radius: $border-radius;
+      padding: 5px;
+      width: 10rem;
+      align-self: center;
+    }
+
+    button:active,
+    button:focus {
+      outline: none;
+    }
+
+  }
+}
+
+.citiesList{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+    top: 42rem;
+    right: 12rem;
+    width: 15rem;
+    padding: 2rem;
+    border-radius: 15px;
+
+    
+    
+    button {
+      background-color: $brown;
+      font-size: 10px;
+      border-radius: $border-radius;
+      padding: 5px;
+      width: 10rem;
+      align-self: center;
+    }
+}

@@ -1,0 +1,53 @@
+@import "src/utils/variables";
+
+@media (max-width: $breakpoint) {
+  .infoContainer {
+    display: none;
+  }
+}
+
+.card {
+  font-family: $usual-text;
+  background-color: $pink;
+  border-radius: $border-radius;
+  padding: 0.5rem;
+  font-size: 25px;
+}
+
+.name {
+  font-family: $head-text;
+  font-size: 30px;
+}
+
+.cardDetails {
+  display: flex;
+  padding: 1rem;
+}
+
+.picContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.infoContainer {
+  list-style-type: none;
+}
+
+.weekDayContainer {
+  font-family: $middle-head-text;
+}
+
+.detailedCard {
+  background-color: $green;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: $border-radius;
+
+  ul {
+    list-style-type: none;
+
+  }
+}

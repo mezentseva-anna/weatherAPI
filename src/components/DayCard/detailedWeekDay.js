@@ -1,11 +1,12 @@
 import React from 'react';
 import {tempConventer, timeConventer} from '../../utils/locals';
+import style from './DayCard.module.scss';
 
 export const DetailedWeekDay = ({detailedWeekDay}) => {
     const {dt, main, weather, wind} = detailedWeekDay;
 
     return (
-        <div>
+        <div className={style.detailedCard}>
             <div>
                 {timeConventer(dt).toLocaleDateString()} <br/>
                 {timeConventer(dt).getUTCHours()} : 00

@@ -1,0 +1,15 @@
+@import "../../utils/variables";
+
+.dayContainer{
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: $border-radius;
+  background-color: $light-green;
+  font-family: $head-text;
+  font-size: 30px;
+}
+
+.hoursContainer {
+  display: flex;
+  flex-wrap: wrap;
+}

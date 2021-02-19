@@ -16,9 +16,9 @@ export default function CityCard({ city }) {
   }
 
   return (
-    <>
-      <div onClick={clickHandler}>{city}</div>
+    <div onClick={clickHandler}>
+      <div>{city}</div>
       <button onClick={deleteCity}>Delete</button>
-    </>
+    </div>
   )
 }

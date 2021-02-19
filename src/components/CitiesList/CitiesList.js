@@ -9,7 +9,7 @@ export default function CitiesList() {
 
   return (
     <div>
-      {cities.map(el => <CityCard key={Math.random()} city={el}/>)}
+      {cities.map(el => <div style={{border:"1px solid black", borderRadius:"25%", padding:"1em",margin:"1em"}}> <CityCard key={performance.now()} city={el}/></div>)}
     </div>
   )
 }
