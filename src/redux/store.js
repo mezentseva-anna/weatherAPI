@@ -10,7 +10,13 @@ import detailedWeekDay from './reducers/detailedWeekDayReducer';
 
 const sagaMiddleware = createSagaMiddleware()
 
-const store = createStore(combineReducers({cities, day, week, err, detailedWeekDay}),
+const city = JSON.parse(window.localStorage.getItem('cities'));
+console.log(city);
+const preloadedState = {
+    cities: city ? city : [],
+}
+
+const store = createStore(combineReducers({cities, day, week, err, detailedWeekDay}), preloadedState,
     composeWithDevTools(applyMiddleware(sagaMiddleware)));
 
 sagaMiddleware.run(rootSaga);
