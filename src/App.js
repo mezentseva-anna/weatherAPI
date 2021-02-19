@@ -26,7 +26,6 @@ export function App() {
     const findCity = (e) => {
         e.preventDefault();
         city = city[0].toUpperCase() + city.slice(1);
-        console.log(city);
         dispatch(fetchWeatherDayAC(city))
         dispatch(fetchWeatherWeekAC(city))
         dispatch(addCitiesAC(city))

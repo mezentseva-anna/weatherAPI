@@ -4,7 +4,8 @@ import {
   FETCH_WEATHER_WEEK,
   ADD_WEATHER_WEEK,
   ADD_DETAILED_WEEK_DAY,
-  ADD_CITIES
+  ADD_CITIES,
+  DELETE_CITY
 } from './actionTypes';
 
 export const addWeatherDayAC = (payload) => ({
@@ -37,6 +38,10 @@ export const addCitiesAC = (payload) => ({
   payload
 })
 
+export const deleteCityAC = (payload) => ({
+  type: DELETE_CITY,
+  payload
+})
 
 export const errDayAC = (payload) => ({
   type: 'ERR_IN_APP',
