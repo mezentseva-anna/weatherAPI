@@ -40,6 +40,8 @@
   padding: 2rem;
   border-radius: $border-radius;
   height: fit-content;
+  max-width: 32em;
+  max-height: 85vh;
 
   form {
     margin: 1rem;

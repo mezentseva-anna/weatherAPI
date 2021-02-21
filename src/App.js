@@ -47,10 +47,8 @@ export function App() {
                             <button type="submit">Find</button>
                         </form>
                         <DayCard />
+                        {cities.length !== 0 ? <CitiesList /> : null}
                     </div>
-                    {cities.length !== 0 ? <div className={style.citiesList}>
-                        <CitiesList />
-                    </div> : null}
                 </div>
                 <WeekList />
             </div>
